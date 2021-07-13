@@ -10,28 +10,11 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home">
         <action
-            android:id="@+id/action_homeFragment2_to_agendaFragment2"
-            app:destination="@id/agendaFragment" />
+            android:id="@+id/action_homeFragment_to_perfilFragment"
+            app:destination="@id/perfilFragment" />
         <action
-            android:id="@+id/action_homeFragment2_to_agendamentosFragment2"
-            app:destination="@id/agendamentosFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/agendaFragment"
-        android:name="com.lucasesteves.beerloversapp.agendaFragment"
-        android:label="fragment_agenda"
-        tools:layout="@layout/fragment_agenda" />
-    <fragment
-        android:id="@+id/agendamentosFragment"
-        android:name="com.lucasesteves.beerloversapp.agendamentosFragment"
-        android:label="fragment_agendamentos"
-        tools:layout="@layout/fragment_agendamentos" >
-        <action
-            android:id="@+id/action_agendamentosFragment_to_contaFragment"
-            app:destination="@id/contaFragment" />
-        <action
-            android:id="@+id/action_agendamentosFragment_to_configContaFragment"
-            app:destination="@id/configContaFragment" />
+            android:id="@+id/action_homeFragment_to_buscarFragment"
+            app:destination="@id/buscarFragment" />
     </fragment>
     <fragment
         android:id="@+id/contaFragment"
@@ -39,8 +22,25 @@
         android:label="fragment_conta"
         tools:layout="@layout/fragment_conta" />
     <fragment
-        android:id="@+id/configContaFragment"
+        android:id="@+id/ConfigContaFragment"
         android:name="com.lucasesteves.beerloversapp.ConfigContaFragment"
         android:label="fragment_config_conta"
         tools:layout="@layout/fragment_config_conta" />
+    <fragment
+        android:id="@+id/perfilFragment"
+        android:name="com.lucasesteves.beerloversapp.perfilFragment"
+        android:label="fragment_perfil"
+        tools:layout="@layout/fragment_perfil" >
+        <action
+            android:id="@+id/action_perfilFragment_to_contaFragment"
+            app:destination="@id/contaFragment" />
+        <action
+            android:id="@+id/action_perfilFragment_to_configContaFragment"
+            app:destination="@id/ConfigContaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/buscarFragment"
+        android:name="com.lucasesteves.beerloversapp.buscarFragment"
+        android:label="fragment_buscar"
+        tools:layout="@layout/fragment_buscar" />
 </navigation>

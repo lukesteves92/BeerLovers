@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager.widget.ViewPager
 import com.lucasesteves.beerloversapp.R
 import com.lucasesteves.beerloversapp.databinding.FragmentHomeBinding
@@ -29,6 +30,9 @@ class homeFragment : Fragment() {
         return binding?.root
 
 
+
+
+
 //        binding?.deslogar?.setOnClickListener{
 //
 //            startActivity(Intent(activity, LoginActivity::class.java))
@@ -44,6 +48,26 @@ class homeFragment : Fragment() {
 //            var password = getString("KEY_PASSWORD")
 //
 //        }
+
+
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding?.AcessarPerfil?.setOnClickListener{
+            findNavController().navigate(
+                R.id.action_homeFragment_to_perfilFragment
+            )
+
+        }
+
+        binding?.BuscarCervejas?.setOnClickListener{
+            findNavController().navigate(
+                R.id.action_homeFragment_to_buscarFragment
+            )
+
+        }
 
 
     }
