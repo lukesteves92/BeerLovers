@@ -20,6 +20,7 @@
     <string name="helper_required">Obrigatório</string>
     <string name="hint_senha">Senha</string>
     <string name="action_1">Acessar</string>
+    <string name="action_2">Deslogar</string>
     <string name="perfil">Perfil</string>
     <string name="buscar">Buscar Cervejas</string>
     <string name="listar">Tipos de Cervejas</string>

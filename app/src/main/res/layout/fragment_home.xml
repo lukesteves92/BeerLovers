@@ -39,7 +39,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:fontFamily="@font/rubik_bold"
-        android:text="Olá, Lucas"
+        tools:text="Olá, Lucas"
         android:textColor="#575757"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -124,6 +124,11 @@
 
             </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
             <com.google.android.material.button.MaterialButton
                     android:id="@+id/AcessarPerfil"
                     android:layout_width="wrap_content"
@@ -133,6 +138,15 @@
                     style="?attr/borderlessButtonStyle"
                     />
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/deslogar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="@string/action_2"
+                style="?attr/borderlessButtonStyle"
+                />
+        </LinearLayout>
 
         </LinearLayout>
 

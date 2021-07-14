@@ -76,6 +76,9 @@ class loginFragment : Fragment() {
                 putString(KEY_PASSWORD, password)
             }
             signIn(email, password)
+            Log.i("TAG01", "$email")
+            Toast.makeText(context, "Login Efetuado", Toast.LENGTH_LONG).show()
+            findNavController().navigate(R.id.action_loginFragment_to_nav_graph, bundle)
         }
 
         binding?.signInButton?.setOnClickListener{
@@ -128,8 +131,8 @@ class loginFragment : Fragment() {
                     Log.d(TAG, "signInWithEmail:success")
                     val user = auth.currentUser
                     updateUI(user)
-                    Toast.makeText(context, "Login Efetuado", Toast.LENGTH_LONG).show()
-                    startActivity(Intent(activity, MainActivity::class.java))
+
+//                    startActivity(Intent(activity, MainActivity::class.java))
                 } else {
                     Log.w(TAG, "signInWithEmail:failure", task.exception)
                     Toast.makeText(context, "Erro ao efetuar o login, verificar login/senha", Toast.LENGTH_LONG).show()
